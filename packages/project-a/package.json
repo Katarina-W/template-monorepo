@@ -1,0 +1,22 @@
+{
+  "name": "@monorepo/package-a",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "lib/umd/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/esm/index.js",
+      "require": "./lib/umd/index.js",
+      "types": "./lib/types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "rimraf lib && vite build && tsc --emitDeclarationOnly",
+    "lint": "pnpm prettier && pnpm eslint && pnpm check",
+    "prettier": "prettier --ignore-path ../../.eslintignore . --write",
+    "eslint": "eslint --ignore-path ../../.eslintignore . --fix",
+    "check": "tsc --noEmit -p tsconfig.json"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "rootDir": "src",
+    "declaration": true,
+    "declarationDir": "lib/types"
+  },
+  "include": ["src"]
+}

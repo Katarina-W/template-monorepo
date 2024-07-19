@@ -1,0 +1,15 @@
+{
+  "name": "@monorepo/package-b",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "rimraf lib && vite build && tsc --emitDeclarationOnly",
+    "lint": "pnpm prettier && pnpm eslint && pnpm check",
+    "prettier": "prettier --ignore-path ../../.eslintignore . --write",
+    "eslint": "eslint --ignore-path ../../.eslintignore . --fix",
+    "check": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@monorepo/package-a": "workspace:*"
+  }
+}
