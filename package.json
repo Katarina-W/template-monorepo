@@ -1,22 +1,26 @@
 {
   "name": "monorepo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "pnpm -F ./packages/** -r run build",
-    "lint": "pnpm -F ./packages/** -r run lint",
+    "build": "pnpm -r run build",
+    "lint": "pnpm -r run lint",
+    "release": "multi-semantic-release --ignore-private-packages -d",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/node": "^20.14.9",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "eslint": "^8.57.0",
     "eslint-plugin-simple-import-sort": "^12.1.0",
     "lint-staged": "^15.2.7",
+    "multi-semantic-release": "^3.0.2",
     "prettier": "^3.3.2",
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.11.1",
@@ -26,7 +30,13 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ]
+    ],
+    "rules": {
+      "body-max-line-length": [
+        0,
+        "always"
+      ]
+    }
   },
   "prettier": {
     "trailingComma": "none"
