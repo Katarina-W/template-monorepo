@@ -1,6 +1,6 @@
 {
   "name": "@atox/package-b",
-  "version": "0.0.1",
+  "version": "1.0.0-alpha.1",
   "type": "module",
   "main": "lib/umd/index.js",
   "module": "lib/esm/index.js",
@@ -27,6 +27,6 @@
     "check": "tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
-    "@atox/package-a": "workspace:*"
+    "@atox/package-a": "1.0.0-alpha.1"
   }
 }
