@@ -1,7 +1,24 @@
 {
-  "name": "@monorepo/package-b",
-  "version": "0.0.0",
+  "name": "@atox/package-b",
+  "version": "0.0.1",
   "type": "module",
+  "main": "lib/umd/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/esm/index.js",
+      "require": "./lib/umd/index.js",
+      "types": "./lib/types/index.d.ts"
+    }
+  },
+  "files": [
+    "lib",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "rimraf lib && vite build && tsc --emitDeclarationOnly",
     "lint": "pnpm prettier && pnpm eslint && pnpm check",
@@ -10,6 +27,6 @@
     "check": "tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
-    "@monorepo/package-a": "workspace:*"
+    "@atox/package-a": "workspace:*"
   }
 }
