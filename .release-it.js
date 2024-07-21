@@ -1,11 +1,13 @@
+const branch = process.env.GITHUB_REF_NAME;
+const tagName = branch === "master" ? "v${version}" : `${branch}-\${version}`;
 /** @type {import('release-it').Config} */
 module.exports = {
   github: {
     release: true
   },
   git: {
-    tagName: "v${version}",
-    commitMessage: "chore(release): ${version} [skip ci]"
+    tagName,
+    commitMessage: `chore(release): ${tagName} [skip ci]`
   },
   npm: false,
   hooks: {

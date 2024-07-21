@@ -1,9 +1,5 @@
 /** @type {import('release-it').Config} */
 module.exports = {
-  git: {
-    tagName: "@atox/package-a@${version}",
-    commitMessage: "chore(release): ${version} [skip ci]"
-  },
   // npm: {
   //   publish: true
   // },
