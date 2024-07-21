@@ -6,6 +6,7 @@
     "build": "pnpm -r run build",
     "lint": "pnpm -r run lint",
     "release": "pnpm -r exec pnpm release && release-it",
+    "release:test": "pnpm -r exec pnpm release -d && release-it -d",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks"
   },
