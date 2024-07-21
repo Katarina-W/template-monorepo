@@ -22,6 +22,7 @@ module.exports = {
     preRelease: branch !== "master"
   },
   git: {
+    tagAnnotation: "chore(release): @atox/package-a@${version} [skip ci]",
     commitMessage: "chore(release): @atox/package-a@${version} [skip ci]"
   },
   npm: {
