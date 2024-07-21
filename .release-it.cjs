@@ -5,7 +5,7 @@ module.exports = {
   },
   git: {
     tagName: "v${version}",
-    tagAnnotation: "chore(release): ${version} [skip ci]"
+    commitMessage: "chore(release): ${version} [skip ci]"
   },
   npm: {
     publish: false
