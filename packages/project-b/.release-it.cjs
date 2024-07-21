@@ -18,9 +18,7 @@ console.log("Current Branch:", branch);
 
 /** @type {import('release-it').Config} */
 module.exports = {
-  github: {
-    preRelease: branch !== "master"
-  },
+  preRelease: branch !== "master",
   git: {
     tagAnnotation: "chore(release): @atox/package-b@${version} [skip ci]",
     commitMessage: "chore(release): @atox/package-b@${version} [skip ci]"

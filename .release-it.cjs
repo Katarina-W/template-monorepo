@@ -18,10 +18,10 @@ console.log("Current Branch:", branch);
 
 /** @type {import('release-it').Config} */
 module.exports = {
+  preRelease: branch !== "master",
   github: {
     release: true,
-    releaseName: "v${version}",
-    preRelease: branch !== "master"
+    releaseName: "v${version}"
   },
   git: {
     tagAnnotation: "chore(release): ${version} [skip ci]",
