@@ -1,9 +1,5 @@
-import type { Config } from "release-it";
-
-/**
- * @see https://github.com/release-it/release-it
- */
-const config: Config = {
+/** @type {import('release-it').Config} */
+module.exports = {
   github: {
     release: true
   },
@@ -47,5 +43,3 @@ const config: Config = {
     }
   }
 };
-
-export default config;
