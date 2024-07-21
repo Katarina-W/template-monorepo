@@ -1,5 +1,7 @@
 
 
+## [0.0.5-1](https://github.com/Katarina-W/template-monorepo/compare/0.0.5-0...0.0.5-1) (2024-07-21)
+
 ## 0.0.1 (2024-07-21)
 
 
