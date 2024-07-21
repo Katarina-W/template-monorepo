@@ -1,4 +1,21 @@
-const branch = process.env.GITHUB_REF_NAME;
+const { execSync } = require("child_process");
+
+function getCurrentBranch() {
+  try {
+    // 执行 Git 命令获取当前分支名
+    const branch = execSync("git rev-parse --abbrev-ref HEAD")
+      .toString()
+      .trim();
+    return branch;
+  } catch (error) {
+    console.error("Error getting current branch:", error);
+    return null;
+  }
+}
+
+const branch = getCurrentBranch();
+console.log("Current Branch:", branch);
+
 /** @type {import('release-it').Config} */
 module.exports = {
   github: {
@@ -6,7 +23,6 @@ module.exports = {
     preRelease: branch !== "master"
   },
   git: {
-    tagName,
     commitMessage: "chore(release): ${version} [skip ci]"
   },
   npm: false,
