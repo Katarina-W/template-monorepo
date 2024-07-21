@@ -6,7 +6,8 @@ module.exports = {
   github: false,
   git: {
     tagName: "@atox/package-b@${version}",
-    tagAnnotation: "chore(release): ${version} [skip ci]"
+    tagAnnotation: "chore(release): ${version} [skip ci]",
+    commitMessage: "chore(release): ${version} [skip ci]"
   }
   // npm: {
   //   publish: true
