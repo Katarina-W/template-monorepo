@@ -18,7 +18,7 @@ console.log("Current Branch:", branch);
 
 /** @type {import('release-it').Config} */
 module.exports = {
-  preRelease: branch !== "master",
+  preRelease: branch === "master" ? false : branch,
   github: {
     release: true,
     releaseName: "v${version}"
