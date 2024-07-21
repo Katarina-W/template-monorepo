@@ -1,5 +1,8 @@
 /** @type {import('release-it').Config} */
 module.exports = {
+  git: {
+    commitMessage: "chore(release): ${version} [skip ci]"
+  },
   npm: {
     publish: false
   },
