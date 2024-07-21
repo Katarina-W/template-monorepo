@@ -35,6 +35,11 @@ jobs:
       - name: Build packages
         run: pnpm build
 
+      - name: git config
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "wc19950724@gmail.com"
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
