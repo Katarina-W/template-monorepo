@@ -1,14 +1,12 @@
 const branch = process.env.GITHUB_REF_NAME;
-const tagName =
-  branch === "master"
-    ? "@atox/package-b@${version}"
-    : `@atox/package-b@${branch}-\${version}`;
 
 /** @type {import('release-it').Config} */
 module.exports = {
+  github: {
+    preRelease: branch !== "master"
+  },
   git: {
-    tagName,
-    commitMessage: `chore(release): ${tagName} [skip ci]`
+    commitMessage: "chore(release): @atox/package-b@${version} [skip ci]"
   },
   npm: {
     publish: false
