@@ -20,6 +20,7 @@ console.log("Current Branch:", branch);
 module.exports = {
   github: {
     release: true,
+    releaseName: "v${version}",
     preRelease: branch !== "master"
   },
   git: {
