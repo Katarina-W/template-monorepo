@@ -1,6 +1,6 @@
 {
   "name": "@atox/package-b",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "lib/umd/index.js",
   "module": "lib/esm/index.js",
