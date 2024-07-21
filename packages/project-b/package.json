@@ -25,7 +25,7 @@
     "prettier": "prettier --ignore-path ../../.eslintignore . --write",
     "eslint": "eslint --ignore-path ../../.eslintignore . --fix",
     "check": "tsc --noEmit -p tsconfig.json",
-    "relase": "relase-it"
+    "release": "release-it"
   },
   "dependencies": {
     "@atox/package-a": "workspace:*"
