@@ -24,7 +24,8 @@
     "lint": "pnpm prettier && pnpm eslint && pnpm check",
     "prettier": "prettier --ignore-path ../../.eslintignore . --write",
     "eslint": "eslint --ignore-path ../../.eslintignore . --fix",
-    "check": "tsc --noEmit -p tsconfig.json"
+    "check": "tsc --noEmit -p tsconfig.json",
+    "relase": "relase-it"
   },
   "dependencies": {
     "@atox/package-a": "workspace:*"

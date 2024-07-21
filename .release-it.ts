@@ -8,8 +8,8 @@ const config: Config = {
     release: true
   },
   git: {
-    commitMessage: "chore(release): v${version}",
-    tagName: "v${version}"
+    tagName: "v${version}",
+    tagAnnotation: "chore(release): ${version} [skip ci]"
   },
   npm: {
     publish: false

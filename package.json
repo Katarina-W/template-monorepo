@@ -5,7 +5,7 @@
   "scripts": {
     "build": "pnpm -r run build",
     "lint": "pnpm -r run lint",
-    "release": "pnpm recursive exec -- echo Current directory: $PWD && npx release-it -c ./.release-it.ts",
+    "release": "pnpm -r run relase",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks"
   },
