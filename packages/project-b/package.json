@@ -13,8 +13,7 @@
     }
   },
   "files": [
-    "lib",
-    "CHANGELOG.md"
+    "lib"
   ],
   "publishConfig": {
     "access": "public"

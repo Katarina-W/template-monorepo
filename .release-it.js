@@ -7,9 +7,7 @@ module.exports = {
     tagName: "v${version}",
     commitMessage: "chore(release): ${version} [skip ci]"
   },
-  npm: {
-    publish: false
-  },
+  npm: false,
   hooks: {
     "before:bump": "echo 开始更新版本",
     "after:bump": "echo 更新版本成功",
@@ -34,7 +32,8 @@ module.exports = {
           { type: "revert", section: "⏪ Reverts | 回退" },
           { type: "build", section: "🔨 Build System | 构建" },
           { type: "ci", section: "🔬 Continuous Integration | CI 配置" },
-          { type: "config", section: "🛠️ Config | 配置" }
+          { type: "config", section: "🛠️ Config | 配置" },
+          { type: "[skip ci]", hidden: true }
         ]
       },
       infile: "CHANGELOG.md",
