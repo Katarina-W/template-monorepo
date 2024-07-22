@@ -26,3 +26,9 @@ pnpm-lock.yaml
 *.njsproj
 *.sln
 *.sw?
+
+# Turbo
+.turbo
+
+# Other
+*.md

@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/package-a",
+  "name": "@atox/package-a",
   "version": "0.0.0",
   "type": "module",
   "main": "lib/umd/index.js",
@@ -11,6 +11,12 @@
       "require": "./lib/umd/index.js",
       "types": "./lib/types/index.d.ts"
     }
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "build": "rimraf lib && vite build && tsc --emitDeclarationOnly",
